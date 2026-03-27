@@ -1,0 +1,72 @@
+.seller-page { }
+.seller-login-prompt, .seller-already, .seller-success {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 60vh; gap: 16px; text-align: center; padding: 40px;
+}
+.seller-login-prompt span, .seller-already span, .seller-success span { font-size: 4rem; }
+.seller-login-prompt h2, .seller-already h2, .seller-success h2 { font-size: 1.8rem; font-weight: 900; }
+.seller-login-prompt p, .seller-already p, .seller-success p { color: var(--gray-500); max-width: 360px; }
+.success-animation { font-size: 5rem; animation: pulse 0.6s ease; }
+
+/* Hero */
+.seller-hero {
+  min-height: 70vh; display: flex; align-items: center;
+  background: linear-gradient(135deg, #EAF6FD, #FFF8F0, #EEF7E6);
+  position: relative; overflow: hidden; padding: 60px 0;
+}
+.seller-hero__bg { position: absolute; inset: 0; pointer-events: none; }
+.seller-blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.3; }
+.seller-blob--1 { width: 500px; height: 500px; background: var(--orange); top: -200px; right: -100px; }
+.seller-blob--2 { width: 400px; height: 400px; background: var(--green); bottom: -100px; left: 100px; }
+.seller-hero__content { position: relative; z-index: 1; display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
+.seller-badge {
+  display: inline-flex; align-items: center;
+  background: var(--orange-light); border: 1.5px solid rgba(244,123,32,0.2);
+  color: var(--orange-dark); border-radius: 999px; padding: 6px 16px;
+  font-size: 0.82rem; font-weight: 700; margin-bottom: 20px;
+}
+.seller-hero__text h1 { font-size: 3rem; font-weight: 900; line-height: 1.15; color: var(--gray-900); margin-bottom: 16px; }
+.seller-hero__text p { font-size: 1.05rem; color: var(--gray-600); line-height: 1.7; }
+
+/* CTA Card */
+.seller-cta-card {
+  background: white; border-radius: var(--radius-xl); padding: 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12); border: 1px solid var(--gray-100);
+}
+.seller-cta-card__header { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+.seller-cta-icon { width: 52px; height: 52px; border-radius: var(--radius-md); background: linear-gradient(135deg, var(--orange-light), var(--green-light)); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; }
+.seller-cta-card__header h3 { font-size: 1.1rem; font-weight: 800; color: var(--gray-900); }
+.seller-cta-card__header p { font-size: 0.82rem; color: var(--green); font-weight: 600; }
+.seller-checklist { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+.seller-check { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--gray-700); font-weight: 500; }
+.check-icon { width: 20px; height: 20px; border-radius: 50%; background: var(--green); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 800; flex-shrink: 0; }
+.seller-activate-btn { width: 100%; justify-content: center; }
+.seller-terms { font-size: 0.75rem; color: var(--gray-400); text-align: center; margin-top: 12px; }
+.seller-terms a { color: var(--blue); }
+
+/* Benefits */
+.seller-benefits { background: var(--gray-50); }
+.benefits-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.benefit-card { padding: 28px 24px; }
+.benefit-icon { font-size: 2.4rem; margin-bottom: 14px; }
+.benefit-card h3 { font-size: 1rem; font-weight: 800; color: var(--gray-800); margin-bottom: 8px; }
+.benefit-card p { font-size: 0.85rem; color: var(--gray-500); line-height: 1.6; }
+
+/* Sell steps */
+.seller-how { background: white; }
+.sell-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
+.sell-step { text-align: center; padding: 32px 24px; }
+.sell-step__num { font-size: 3.5rem; font-weight: 900; color: var(--gray-100); line-height: 1; margin-bottom: 8px; }
+.sell-step__icon { font-size: 2.8rem; margin-bottom: 16px; }
+.sell-step h3 { font-size: 1.05rem; font-weight: 800; color: var(--gray-800); margin-bottom: 10px; }
+.sell-step p { font-size: 0.88rem; color: var(--gray-500); line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .seller-hero__content { grid-template-columns: 1fr; }
+  .benefits-grid { grid-template-columns: repeat(2,1fr); }
+  .sell-steps { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .seller-hero__text h1 { font-size: 2rem; }
+  .benefits-grid { grid-template-columns: 1fr; }
+}

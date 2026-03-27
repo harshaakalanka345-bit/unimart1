@@ -1,0 +1,162 @@
+.add-product-page {
+  padding: 40px 20px;
+  background: var(--bg-color);
+  min-height: calc(100vh - 150px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-product-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.add-product-header h1 {
+  font-size: 2.2rem;
+  color: var(--text-color);
+  font-weight: 800;
+}
+
+.add-product-header p {
+  color: var(--text-light);
+  margin-top: 8px;
+}
+
+.add-product-card {
+  max-width: 700px;
+  width: 100%;
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 4px;
+}
+
+.section-sub {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin: 0 0 24px 0;
+}
+
+.divider {
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  margin: 30px 0;
+}
+
+.image-upload-area {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.file-input-hidden {
+  display: none;
+}
+
+.image-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border: 2px dashed rgba(243, 114, 44, 0.4);
+  border-radius: 12px;
+  background: rgba(243, 114, 44, 0.02);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.image-upload-label:hover {
+  background: rgba(243, 114, 44, 0.05);
+  border-color: var(--primary);
+}
+
+.upload-icon {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.upload-limit {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+.image-preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-preview-chip {
+  background: var(--bg-hover);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.image-preview-chip span {
+  color: var(--green);
+  font-weight: bold;
+}
+
+.price-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-color);
+}
+
+.price-input-wrapper:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(243, 114, 44, 0.1);
+}
+
+.currency-symbol {
+  padding: 14px 16px;
+  background: var(--gray-100);
+  color: var(--text-light);
+  font-weight: 600;
+  border-right: 1px solid var(--border-color);
+}
+
+.price-input {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,66 @@
+.about-page { }
+.about-hero {
+  min-height: 50vh; display: flex; align-items: center;
+  background: linear-gradient(135deg, #EAF6FD, #FFF8F0, #EEF7E6);
+  position: relative; overflow: hidden; padding: 80px 0;
+}
+.about-hero__bg { position: absolute; inset: 0; pointer-events: none; }
+.about-blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.3; }
+.about-blob--1 { width: 400px; height: 400px; background: var(--blue); top: -150px; left: -50px; }
+.about-blob--2 { width: 300px; height: 300px; background: var(--orange); bottom: -100px; right: 200px; }
+.about-blob--3 { width: 250px; height: 250px; background: var(--green); top: 20%; right: -50px; }
+.about-hero__content { position: relative; z-index: 1; text-align: center; }
+.about-hero__logo { margin-bottom: 24px; }
+.about-logo-icon {
+  display: inline-flex; align-items: center; background: linear-gradient(135deg, var(--blue) 40%, var(--orange) 70%, var(--green) 100%);
+  padding: 8px 20px; border-radius: 12px; font-family: var(--font-main); font-weight: 800; font-size: 2rem;
+}
+.about-logo-icon span:first-child { color: white; }
+.about-logo-icon span:last-child { color: rgba(255,255,255,0.85); }
+.about-hero__logo p { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; color: var(--gray-500); margin-top: 6px; }
+.about-hero__content h1 { font-size: 3.5rem; font-weight: 900; color: var(--gray-900); margin-bottom: 16px; }
+.about-hero__sub { font-size: 1.1rem; color: var(--gray-600); max-width: 500px; margin: 0 auto; line-height: 1.7; }
+
+/* Mission */
+.about-mission { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: center; }
+.about-mission__text p { color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
+.about-values { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; margin-top: 28px; }
+.about-value { background: var(--gray-50); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 4px; border: 1px solid var(--gray-100); }
+.about-value span { font-size: 1.5rem; }
+.about-value strong { font-size: 0.9rem; color: var(--gray-800); }
+.about-value small { font-size: 0.78rem; color: var(--gray-500); }
+.about-stat-card { background: linear-gradient(135deg, var(--blue), var(--orange)); border-radius: var(--radius-xl); padding: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.about-stat { text-align: center; }
+.about-stat__num { display: block; font-size: 2rem; font-weight: 900; color: white; }
+.about-stat__label { font-size: 0.82rem; color: rgba(255,255,255,0.8); }
+
+/* Tech */
+.about-tech-section { background: var(--gray-50); }
+.tech-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.tech-card { padding: 28px 24px; border-radius: var(--radius-lg); transition: var(--transition); border: 2px solid transparent; }
+.tech-card--blue { background: var(--blue-light); }
+.tech-card--orange { background: var(--orange-light); }
+.tech-card--green { background: var(--green-light); }
+.tech-card--blue:hover { border-color: var(--blue); transform: translateY(-4px); }
+.tech-card--orange:hover { border-color: var(--orange); transform: translateY(-4px); }
+.tech-card--green:hover { border-color: var(--green); transform: translateY(-4px); }
+.tech-icon { font-size: 2.5rem; display: block; margin-bottom: 12px; }
+.tech-card h3 { font-size: 1rem; font-weight: 800; color: var(--gray-800); margin-bottom: 6px; }
+.tech-card p { font-size: 0.85rem; color: var(--gray-500); line-height: 1.5; }
+
+/* Team */
+.team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.team-card { padding: 28px 24px; text-align: center; }
+.team-avatar { font-size: 3.5rem; margin-bottom: 14px; width: 80px; height: 80px; background: linear-gradient(135deg, var(--blue-light), var(--orange-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+.team-card h3 { font-size: 1rem; font-weight: 800; color: var(--gray-800); margin-bottom: 4px; }
+.team-role { font-size: 0.82rem; color: var(--gray-500); margin-bottom: 10px; }
+
+/* About CTA */
+.about-cta { background: linear-gradient(135deg, var(--blue-light), var(--orange-light)); border-radius: var(--radius-xl); padding: 52px; text-align: center; }
+.about-cta h2 { font-size: 2rem; font-weight: 900; color: var(--gray-900); margin-bottom: 10px; }
+.about-cta p { color: var(--gray-600); margin-bottom: 28px; }
+.about-cta__btns { display: flex; gap: 14px; justify-content: center; }
+
+@media (max-width: 1024px) { .tech-grid { grid-template-columns: repeat(2,1fr); } .team-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 860px) { .about-mission { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .about-hero__content h1 { font-size: 2.2rem; } .tech-grid { grid-template-columns: 1fr; } .team-grid { grid-template-columns: repeat(2,1fr); } }

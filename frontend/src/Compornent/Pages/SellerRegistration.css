@@ -1,0 +1,194 @@
+.seller-reg-page {
+  padding: 80px 20px;
+  min-height: calc(100vh - 200px);
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seller-reg-container {
+  max-width: 600px;
+  width: 100%;
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.seller-reg-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.seller-reg-header p {
+  color: var(--text-light);
+  margin-bottom: 32px;
+}
+
+.seller-reg-form {
+  text-align: left;
+}
+
+.seller-reg-form .form-group {
+  margin-bottom: 24px;
+}
+
+.seller-reg-form .form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.seller-reg-form .form-input,
+.seller-reg-form .form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.seller-reg-form .form-input:focus,
+.seller-reg-form .form-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(243, 114, 44, 0.1);
+}
+
+.seller-reg-form .form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.seller-reg-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding: 16px;
+  background: rgba(243, 114, 44, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(243, 114, 44, 0.1);
+}
+
+.seller-reg-terms input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.seller-reg-terms label {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.seller-reg-terms a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.seller-reg-terms a:hover {
+  text-decoration: underline;
+}
+
+.seller-reg-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.seller-reg-actions .btn {
+  flex: 1;
+}
+
+/* Success State */
+.seller-reg-success {
+  text-align: center;
+  padding: 40px 20px;
+}  
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 24px;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+.stepper-progress {
+  height: 6px;
+  background: var(--border-color);
+  border-radius: 4px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.stepper-bar {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.4s ease;
+  border-radius: 4px;
+}
+
+.req {
+  color: red;
+  margin-left: 2px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.file-input {
+  padding: 10px;
+  background: white;
+}
+
+.verification-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.verify-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: #f9fafb;
+}
+
+.verify-box p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin: 4px 0 0 0;
+}
+
+.step-content {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
